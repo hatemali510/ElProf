@@ -29,6 +29,14 @@ export class LectureDetailsComponent {
         "link":"www.google.com",
         "questionsCount":100,
         "viewsCount":5
+      },
+      {
+        "id":"1",
+        "name":"المحاضرة الاولي",
+        "desc":"محاضرة الضوء",
+        "link":"www.google.com",
+        "questionsCount":100,
+        "viewsCount":5
       }
       ,
       {
