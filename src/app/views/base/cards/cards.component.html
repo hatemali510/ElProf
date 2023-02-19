@@ -1,0 +1,99 @@
+<c-row >
+
+ 
+
+  <c-col xs="12">
+    <c-card class="mb-4">
+     
+      <c-card-header>
+        <strong>السنة الدراسية الاولي</strong> 
+      </c-card-header>
+      <c-card-body>
+        
+        <app-docs-example href="components/card/#grid-cards">
+          <c-row [gutter]="{g: 4}" [md]="3" [xs]="1">
+            <c-col>
+              <c-card>
+                <ng-container >
+                  <img cCardImg="top" src="./assets/images/85_2_course.jpg">
+
+                </ng-container>
+                <c-card-body>
+                  <h5 cCardTitle>المحاضرة الاولي </h5>
+                  <p cCardText>
+                    محاضرة الضوء
+                  </p>
+                </c-card-body>
+                <c-card-footer>
+                  <a [routerLink]="['/lecture-details','1']" class="btn btn-primary">تفاصيل الدرس </a>
+                </c-card-footer>
+              </c-card>
+            </c-col>
+            <c-col>
+              <c-card>
+                <ng-container >
+                  <img cCardImg="top" src="./assets/images/85_2_course.jpg">
+
+                </ng-container>
+                <c-card-body>
+                  <h5 cCardTitle>المحاضرة الثانية</h5>
+                  <p cCardText>
+                    محاضرة الصوت
+
+                  </p>
+                </c-card-body>
+                <c-card-footer>
+                  <a [routerLink]="['/lecture-details','2']" class="btn btn-primary">تفاصيل الدرس </a>
+                </c-card-footer>
+              </c-card>
+            </c-col>
+            <c-col>
+              <c-card>
+                <ng-container >
+                  <img cCardImg="top" src="./assets/images/85_2_course.jpg">
+
+                </ng-container>                <c-card-body>
+                  <h5 cCardTitle>المحاضرة الثالثة</h5>
+                  <p cCardText>
+                    محاضرة الكهرباء الدينامكية 
+                  </p>
+                </c-card-body>
+                <c-card-footer>
+                  <a [routerLink]="['/lecture-details','3']" class="btn btn-primary">تفاصيل الدرس </a>
+                </c-card-footer>
+              </c-card>
+            </c-col>
+      
+          </c-row>
+        </app-docs-example>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
+
+
+<ng-template #imgPlaceholderTemplate let-orientation>
+  <svg
+    [cCardImg]="orientation ?? 'top'"
+    aria-label="Placeholder: Image cap"
+    class="docs-placeholder-img"
+    focusable="false"
+    height="180"
+    preserveAspectRatio="xMidYMid slice"
+    role="img"
+    width="100%"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>Placeholder</title>
+    <rect fill="#868e96" height="100%" width="100%"></rect>
+    <text dominant-baseline="middle" dy=".3em" fill="#dee2e6" text-anchor="middle" x="50%" y="50%">Image cap</text>
+  </svg>
+</ng-template>
+
+<ng-template #cardBodyTemplate>
+  <h5 cCardTitle>Card title</h5>
+  <p cCardText>
+    Some quick example text to build on the card title and make up the bulk of the card's content.
+  </p>
+  <button cButton color="primary">Go somewhere</button>
+</ng-template>
